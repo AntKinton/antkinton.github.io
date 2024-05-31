@@ -1,0 +1,90 @@
+
+/* heading */
+/*h3 {
+  text-align: center;
+}*/
+/* slider container */
+.slider {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+  position: relative;
+  margin: 40px auto;
+  max-width: 600px;
+}
+/* image */
+.slide-image {
+  width: 100%;
+  min-height: 200px;
+  height: auto;
+  max-height: 400px;
+  padding: 10px;
+  margin: 0 auto;
+  overflow: auto;
+  object-fit: cover;
+}
+/* paragraph holding the count and number of the images */
+pSlide {
+  text-align: center;
+}
+/* prev and next btns */
+.btnSlide {
+  position: absolute;
+  top: 50%;
+  font-size: 80%;
+  background-color: rgb(228, 231, 231);
+  border: solid 1px rgb(201, 199, 199);
+  padding: 5px;
+  cursor: pointer;
+}
+/* prev btn */
+.backward {
+  left: 0px;
+}
+/* next btn */
+.forward {
+  right: 0px;
+}
+
+
+.image-container {
+  position: relative;
+}
+
+.image-text-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Fondo semi-transparente */
+  padding: 5px;
+  /* Ajusta el espaciado según sea necesario */
+}
+
+.image-text-overlay p {
+  color: #ffffff;
+  /* Color del texto */
+  margin: 0;
+  /* Elimina el margen del párrafo */
+}
+
+.cover-photo {
+  height: 300px;
+  /* Ajusta la altura de la imagen de portada */
+  background-size: cover;
+  background-position: center;
+}
+
+.left-divider {
+  border-left: 1px solid #ffffff;
+  /* Color blanco para el borde derecho */
+  padding-left: 8px;
+  /* Añadir un poco de espacio entre el texto y la línea */
+}
+
+.right-divider {
+  border-right: 1px solid #ffffff;
+  /* Color blanco para el borde derecho */
+  padding-right: 8px;
+  /* Añadir un poco de espacio entre el texto y la línea */
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inscripción</title>
+  <link rel="icon" type="image/x-icon" href="images/antsplan.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body style="padding-bottom: 60px;">
+  <div class="container-fluid cover-photo" style="background-image: url('images/messor.jpg');
+       height: 100px;
+       background-size: cover;
+       background-position: center;">
+
+  </div>
+
+  <!-- Barra superior de navegación -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-md">
+
+      <a class="navbar-brand" href="index.html">Antsplan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item left-divider"><a class="nav-link" href="forms.html">Formularios</a></li>
+          <li class="nav-item"><a class="nav-link" href="json.html">JSON</a></li>
+          <li class="nav-item right-divider"><a class="nav-link" href="app.html">Aplicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Especies</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="links.html">Enlaces</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-md" style="margin-top: 8px;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Formularios</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container-sm">
+    <form action="formresult.html" method="get" onsubmit="return formValidation()">
+      <h1 class="mt-5">Formulario inscripción</h1>
+      <hr />
+      <h3 class:"mt-5">Datos personales:</h3>
+      <div class="row gap-2">
+        <div class="col">
+          <label class="mt-2">Nombre: </label>
+          <input class="form-control" type="text" id="nombre" name="nombre" value="" style="width: 300px;">
+        </div>
+        <div class="col">
+          <label class="mt-2">Apellidos: </label>
+          <input class="form-control" type="text" id="apellidos" name="apellidos" value="" style="width: 400px;">
+        </div>
+        <!--<div class="col">
+          <label class="mt-2">DNI/NIE: </label>
+          <input class="form-control" type="text" id="dninie" name="dninie" value="" style="width: 150px;">
+        </div>
+      </div>-->
+
+      <div class="row gap-2">
+        <div class="col">
+          <label class="mt-2">email: </label>
+          <input class="form-control" type="text" id="email" name="email" value="" style="width: 250px;">
+        </div>
+        <div class="col">
+          <label class="mt-2">Teléfono: </label>
+          <input class="form-control" type="text" id="telf" name="telf" value="" style="width: 200px;">
+        </div>
+      </div>
+
+      <hr />
+      <h3 class="mt-2">Me interesa:</h3>
+      <div>
+        <input type="radio" id="taxo" name="fav_subject" value="Taxonomía">
+        <label for="taxo">Taxonomía</label>
+      </div>
+      <div>
+        <input type="radio" id="bio" name="fav_subject" value="Biología">
+        <label for="bio">Biología</label>
+      </div>
+      <div>
+        <input type="radio" id="fotog" name="fav_subject" value="Fotografía">
+        <label for="fotog">Fotografía</label>
+      </div>
+      <hr />
+      <h3 class="mt-2">Deseo recibir:</h3>
+      <div class="checkbox">
+        <input type="checkbox" id="info1" name="info1" value="Revista trimestral">
+        <label for="info1">Revista trimestral</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="info2" name="info2" value="Noticias y eventos">
+        <label for="info2">Noticias y eventos</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="info3" name="info3" value="Papers mirmecología">
+        <label for="info3">Papers mirmecología</label>
+      </div>
+      <div class="checkbox">
+        <input type="checkbox" id="info4" name="info4" value="Manuales de campo">
+        <label for="info4">Manuales de campo</label>
+      </div>
+      <hr />
+      <button type="submit" class="btn btn-outline-success mt-2">Enviar inscripción</button>
+    </form>
+  </div>
+
+  <!-- Pie de página -->
+  <div class="container-fluid py-2 text-left fixed-bottom" style="background-color: #343a40; color: #ffffff; text-align: left; padding: 20px;">
+    Antsplan, tu web de mirmecologia.
+  </div>
+
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    //Comprueba que el campo nombre no está vacío.
+    function valNameTextInput() {
+      let firstName = document.getElementById("nombre").value;
+      if (firstName == null || firstName.length == 0 ||
+        /^\s+$/.test(firstName)) {
+        alert('Introduce un nombre.');
+        return false;
+      }
+      return true;
+    }
+
+    //Valida formato correcto del campo email.
+    function valEmailTextInput() {
+      let eMail = document.getElementById("email").value;
+      if (eMail.trim() === "") {
+        alert('Introduce un Email, por favor.');
+        return false;
+      }
+      let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!(regex.test(eMail.toLowerCase()))) {
+        alert('El formato de la dirección de Email es incorrecto.');
+        return false;
+      }
+      return true;
+    }
+
+    //Función para validar si es un número de telf y su formato.
+    function valTelfTextInput() {
+      let telfNum = document.getElementById("telf").value;
+      if (telfNum == null || telfNum.length == 0 ||
+        /^\s+$/.test(telfNum)) {
+        alert('Introduce un número de teléfono.');
+        return false;
+      } else {
+        if (!(/^\d{9}$/.test(telfNum))) {
+          alert('Escribe el teléfono en formato de 9 dígitos:\n(900900900 sin espacios en blanco.)');
+          return false
+        }
+      }
+      return true;
+    }
+
+    //Función para validar entrada y formato de dninie.
+    /*function valDniNieTextInput() {
+      value = document.getElementById("dninie").value;
+      let letters = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X',
+        'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H', 'L', 'C', 'K', 'E', 'T'
+      ];
+
+    }*/
+
+    //Comprueba que se ha seleccionado una opción temática.
+    function valFLangRadioInput() {
+      let radioOptions = document.getElementsByName("fav_subject");
+      let select = false;
+      for (let i = 0; i < radioOptions.length; i++) {
+        if (radioOptions[i].checked) {
+          select = true;
+          break;
+        }
+      }
+      if (!select) {
+        alert('Selecciona un tema de interés.');
+      }
+      return select;
+    }
+
+    //Comprueba que se ha seleccionado al menos una opción de boletín.
+    function valCheckboxInput() {
+      let checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+      if (checkboxes.length === 0) {
+        alert('Debes seleccionar al menos una opción a recibir.');
+        return false;
+      } else {
+        return true;
+      }
+    }
+
+
+    //Función que ejecuta todas las validaciones
+    //la cual es devuelta desde el onsubmit en el form
+    function formValidation() {
+      return valNameTextInput() &&
+        valEmailTextInput() &&
+        valTelfTextInput() &&
+        valFLangRadioInput() &&
+        valCheckboxInput();
+      //&& valDniNieTextInput();
+    }
+  </script>
+
+</body>
+
+</html>

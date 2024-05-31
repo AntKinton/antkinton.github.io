@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON</title>
+  <link rel="icon" type="image/x-icon" href="images/antsplan.jpg">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body style="padding-bottom: 60px;">
+  <div class="container-fluid cover-photo" style="background-image: url('images/messor.jpg');
+       height: 100px;
+       background-size: cover;
+       background-position: center;">
+
+  </div>
+
+  <!-- Barra superior de navegación -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-md">
+
+      <a class="navbar-brand" href="index.html">Antsplan</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item left-divider"><a class="nav-link" href="forms.html">Formularios</a></li>
+          <li class="nav-item"><a class="nav-link" href="json.html">JSON</a></li>
+          <li class="nav-item right-divider"><a class="nav-link" href="app.html">Aplicación</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Especies</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">Acerca de</a></li>
+          <li class="nav-item"><a class="nav-link" href="links.html">Enlaces</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="container-md" style="margin-top: 8px;">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item"><a href="forms.html">Formularios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">JSON</a></li>
+      </ol>
+    </nav>
+  </div>
+
+  <div class="container-fluid">
+    <header id="anthead">
+    </header>
+    <div class="container-md">
+      <section id="antlist">
+      </section>
+    </div>
+
+  </div>
+
+  <!-- Pie de página -->
+  <div class="container-fluid py-2 text-left fixed-bottom" style="background-color: #343a40; color: #ffffff; text-align: left; padding: 20px;">
+    Antsplan, tu web de mirmecologia.
+  </div>
+
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.11.6/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Define tu objeto JSON directamente sin necesidad de parsear
+    const antsCollection = {
+      "name": "Listado de Hormigas",
+      "hormigas": [{
+          "subfamilia": "Formicinae",
+          "generos": [{
+              "nombre": "Camponotus",
+              "especies": [{
+                  "_id": 1,
+                  "nombre": "floridanus",
+                  "regiones": [
+                    "Sureste de Estados Unidos",
+                    "México"
+                  ]
+                },
+                {
+                  "_id": 2,
+                  "nombre": "foreli",
+                  "regiones": [
+                    "Europa"
+                  ]
+                },
+                {
+                  "_id": 3,
+                  "nombre": "cruentatus",
+                  "regiones": [
+                    "Europa",
+                    "Norte de África"
+                  ]
+                }
+              ]
+            },
+            {
+              "nombre": "Formica",
+              "especies": [{
+                  "_id": 15,
+                  "nombre": "rufa",
+                  "regiones": [
+                    "Europa",
+                    "Asia"
+                  ]
+                },
+                {
+                  "_id": 4,
+                  "nombre": "rufibarbis",
+                  "regiones": [
+                    "Europa"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "subfamilia": "Myrmicinae",
+          "generos": [{
+              "nombre": "Atta",
+              "especies": [{
+                "_id": 5,
+                "nombre": "cephalotes",
+                "regiones": [
+                  "América del Sur",
+                  "Centroamérica",
+                  "Caribe"
+                ]
+              }]
+            },
+            {
+              "nombre": "Pheidole",
+              "especies": [{
+                  "_id": 6,
+                  "nombre": "megacephala",
+                  "regiones": [
+                    "África",
+                    "Asia",
+                    "Oceanía",
+                    "América"
+                  ]
+                },
+                {
+                  "_id": 7,
+                  "nombre": "pallidula",
+                  "regiones": [
+                    "Europa",
+                    "África del Norte"
+                  ]
+                }
+              ]
+            },
+            {
+              "nombre": "Messor",
+              "especies": [{
+                  "_id": 8,
+                  "nombre": "barbarus",
+                  "regiones": [
+                    "Europa",
+                    "África del Norte"
+                  ]
+                },
+                {
+                  "_id": 9,
+                  "nombre": "capitatus",
+                  "regiones": [
+                    "Europa",
+                    "África del Norte"
+                  ]
+                }
+              ]
+            },
+            {
+              "nombre": "Aphaenogaster",
+              "especies": [{
+                  "_id": 10,
+                  "nombre": "iberica",
+                  "regiones": [
+                    "Europa"
+                  ]
+                },
+                {
+                  "_id": 11,
+                  "nombre": "senilis",
+                  "regiones": [
+                    "Europa",
+                    "África"
+                  ]
+                }
+              ]
+            },
+            {
+              "nombre": "Iberoformica",
+              "especies": [{
+                "_id": 12,
+                "nombre": "subrufa",
+                "regiones": [
+                  "Peninsula ibérica"
+                ]
+              }]
+            },
+            {
+              "nombre": "Cataglyphis",
+              "especies": [{
+                  "_id": 14,
+                  "nombre": "velox",
+                  "regiones": [
+                    "Europa",
+                    "Norte de África",
+                    "Oriente Medio"
+                  ]
+                },
+                {
+                  "_id": 13,
+                  "nombre": "iberica",
+                  "regiones": [
+                    "Europa"
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    };
+
+    populateHeader(antsCollection);
+    muestraHormigas(antsCollection);
+
+    function populateHeader(jsonObj) {
+      /*const myH1 = document.createElement("h1");
+      myH1.textContent = jsonObj["name"];
+      document.querySelector("header").appendChild(myH1);*/
+      const antHeader = document.getElementById("anthead");
+      const headerItem = document.createElement("h1");
+      headerItem.textContent = jsonObj["name"];
+      antHeader.appendChild(headerItem);
+      const paramItem = document.createElement("p");
+      paramItem.textContent = "Clasificación por especie, en orden alfabético";
+      antHeader.appendChild(paramItem);
+    };
+
+    function muestraHormigas(jsonObj) {
+      const antSection = document.getElementById("antlist");
+      let allGeneros = [];
+      for (let i = 0; i < jsonObj.hormigas.length; i++) {
+        allGeneros = allGeneros.concat(jsonObj.hormigas[i].generos);
+      }
+      allGeneros.sort(compareNames);
+      for (let i = 0; i < allGeneros.length; i++) {
+        const genero = allGeneros[i].nombre;
+        const speciesList = allGeneros[i].especies;
+        speciesList.sort(compareNames);
+        for (let j = 0; j < speciesList.length; j++) {
+          const especie = speciesList[j].nombre;
+          const especieId = speciesList[j]._id;
+          const especieItem = document.createElement("li");
+          const especieLink = document.createElement("a");
+
+          especieLink.textContent = '+info';
+          especieLink.href = `species_details.html?id=${especieId}`;
+          especieItem.textContent = genero + ' ' + especie + ' ';
+          especieItem.appendChild(especieLink);
+          antSection.appendChild(especieItem);
+        }
+      }
+    };
+
+    function compareNames(a, b) {
+      const nameA = a.nombre.toUpperCase();
+      const nameB = b.nombre.toUpperCase();
+
+      let comparison = 0;
+      if (nameA > nameB) {
+        comparison = 1;
+      } else if (nameA < nameB) {
+        comparison = -1;
+      }
+      return comparison;
+    };
+  </script>
+
+</body>
+
+</html>

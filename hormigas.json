@@ -1,0 +1,160 @@
+{
+  "hormigas": [{
+      "subfamilia": "Formicinae",
+      "generos": [{
+          "nombre": "Camponotus",
+          "especies": [{
+              "_id": 1,
+              "nombre": "Camponotus floridanus",
+              "comunidades": [
+                "Sureste de Estados Unidos",
+                "México"
+              ]
+            },
+            {
+              "_id": 2,
+              "nombre": "Camponotus foreli",
+              "comunidades": [
+                "Europa"
+              ]
+            },
+            {
+              "_id": 3,
+              "nombre": "Camponotus cruentatus",
+              "comunidades": [
+                "Europa",
+                "Norte de África"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Formica",
+          "especies": [{
+              "_id": 15,
+              "nombre": "Formica rufa",
+              "comunidades": [
+                "Europa",
+                "Asia"
+              ]
+            },
+            {
+              "_id": 4,
+              "nombre": "Formica rufibarbis",
+              "comunidades": [
+                "Europa"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "subfamilia": "Myrmicinae",
+      "generos": [{
+          "nombre": "Atta",
+          "especies": [{
+            "_id": 5,
+            "nombre": "Atta cephalotes",
+            "comunidades": [
+              "América del Sur",
+              "Centroamérica",
+              "Caribe"
+            ]
+          }]
+        },
+        {
+          "nombre": "Pheidole",
+          "especies": [{
+              "_id": 6,
+              "nombre": "Pheidole megacephala",
+              "comunidades": [
+                "África",
+                "Asia",
+                "Oceanía",
+                "América"
+              ]
+            },
+            {
+              "_id": 7,
+              "nombre": "Pheidole pallidula",
+              "comunidades": [
+                "Europa",
+                "África del Norte"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Messor",
+          "especies": [{
+              "_id": 8,
+              "nombre": "Messor barbarus",
+              "comunidades": [
+                "Europa",
+                "África del Norte"
+              ]
+            },
+            {
+              "_id": 9,
+              "nombre": "Messor capitatus",
+              "comunidades": [
+                "Europa",
+                "África del Norte"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Aphaenogaster",
+          "especies": [{
+              "_id": 10,
+              "nombre": "Aphaenogaster iberica",
+              "comunidades": [
+                "Europa"
+              ]
+            },
+            {
+              "_id": 11,
+              "nombre": "Aphaenogaster senilis",
+              "comunidades": [
+                "Europa",
+                "África"
+              ]
+            }
+          ]
+        },
+        {
+          "nombre": "Iberoformica",
+          "especies": [{
+            "_id": 12,
+            "nombre": "Iberoformica subrufa",
+            "comunidades": [
+              "Peninsula ibérica"
+            ]
+          }]
+        },
+        {
+          "nombre": "Cataglyphis",
+          "especies": [{
+              "_id": 13,
+              "nombre": "Cataglyphis iberica",
+              "comunidades": [
+                "Europa"
+              ]
+            },
+            {
+              "_id": 14,
+              "nombre": "Cataglyphis velox",
+              "comunidades": [
+                "Europa",
+                "Norte de África",
+                "Oriente Medio"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
